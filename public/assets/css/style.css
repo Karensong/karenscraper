@@ -1,0 +1,188 @@
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+  margin: 0 auto;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: 400px;
+  margin-top: 25px;
+
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+
+body {
+    background-image: url("../images/background_school.jpg");
+    height: 100%;
+    color: rgb(128, 126, 126);
+}
+
+.frosty {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding-bottom: 30px;
+  border-radius: 10px;
+  /*background-color: rgb(255, 255, 255);
+  margin-top: 25px;
+  animation: fadein 2s 2s ease-in-out forwards;
+  z-index: 1;*/
+  
+}
+
+div.frosty.center {
+  text-align: center
+}
+
+div.frosty.flashcard_play {
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.6)
+}
+/* div.frosty.set {
+  width: 300px;
+} */
+
+.module {
+  padding-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.baraja-demo {
+  padding-top: 20px;
+}
+
+.nav-fan7 {
+  margin-left: 80px;
+}
+
+.dropdown-button {
+  margin-top: 25px;
+}
+
+.instruction {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.flashcardplay {
+  text-align: center;
+  padding: 50px 50px 50px 50px;
+}
+
+.welcome {
+  padding: 85px 85px 20px 85px;
+}
+/*.content {
+  z-index: 2;
+  background: transparent;
+}*/
+
+/*@keyframes fadein {
+  from {
+     opacity: 0;
+  }
+  to {
+     opacity: 1;
+  }
+}*/
+
+#name {
+  margin-top: 50px;
+}
+
+#name, #inputfront, #inputback {
+  margin-left: 40px;
+}
+
+.button {
+  margin-left: 50px;
+}
+
+.chip {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.card-panel {
+  margin-right: 50px;
+}
+
+h3.text-muted#appName {
+  padding-top: 50px;
+}
+
+div.row.separator {
+  height: 40px;
+}
+
+div.card-action {
+  width: 400px;
+}
+
+h5#instruction_flip {
+  padding-top: 40px;
+}
+
+form.hidden_input input{
+  display: none;
+}
+
+h5#game_over{
+  padding: 40px;
+  color: rgb(97, 95, 95)
+}
+a#play_again {
+  margin-top: 40px;
+}
+
+div.alert.alert-danger {
+  background-color: rgba(241, 91, 54, 0.75);
+  padding: 20px;
+  border-radius: 3px;
+  margin: 5px;
+  font-size: 18px;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(44, 43, 41)
+
+}
+div.alert.alert-success{
+  background-color: rgba(152, 251, 152, 0.815);
+  padding: 20px;
+  border-radius: 3px;
+  margin: 5px;
+  font-size: 20px;
+  text-align: center;
+}
